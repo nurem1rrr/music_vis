@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Visualizer</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Browser Audio Visualizer</h1>
+  <div id="controls">
+    <button id="start-capture" disabled>Start Capture</button>
+    <button id="stop-capture" disabled>Stop Capture</button>
+    <select id="visualization-style">
+      <option value="bars">Bars</option>
+      <option value="waveform">Waveform</option>
+      <option value="circle">Circle</option>
+    </select>
+    <label>
+      Sensitivity:
+      <input type="range" id="sensitivity" min="1" max="10" value="5">
+    </label>
+    <label>
+      Bar Color:
+      <input type="color" id="bar-color" value="#ff64a1">
+    </label>
+    <label>
+      Upload Audio:
+      <input type="file" id="audio-file" accept="audio/*">
+    </label>
+  </div>
+  <canvas id="visualizer"></canvas>
+
+  <script src="./script.js"></script>
+</body>
+</html>
